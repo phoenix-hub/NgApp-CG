@@ -1,0 +1,42 @@
+ 
+<div class="row top-buffer">
+    <div class="col-lg-12 widget-container ui-sortable">
+        <section class="widget" id="news-widget" data-widgster-load="../demo/ajax/widgets/news.php">
+            <header class="ui-sortable-handle">
+                <h6>
+                    Customer's <span class="badge badge-pill bg-success">
+                        {{ recordFound }}
+                    </span>
+
+                    <div class="float-right">
+                        Category
+                        <div class="btn-group" dropdown>
+                            <select class='select-option' #mySelect (change)='onOptionsSelected(mySelect.value)'>
+                                <option value="0">All</option>
+                                <option class='option' *ngFor='let option of options' [value]="option">{{option}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </h6>
+            </header>
+            <div class="widget-body p-0">
+                <ul class="news-list stretchable" *ngFor="let item of CustomersList">
+                    <li class="cardRow top-buffer">
+                        <span class="thumb-sm float-left mr">
+                            <img class="rounded-circle" class="profileImage"
+                                src="../../assets/CustomersImgs/DummyCustomers.png" alt="...">
+                        </span>
+                        <div class="news-item-info">
+                            <h5 class="name no-margin mb-xs">{{item.customerName}}</h5>
+                            <p class="fs-mini">
+                                PrimaryContact : {{item.primaryContact}}, PhoneNumber : {{item.phoneNumber}},
+                            </p>
+                            <time class="help-block">CityName : {{item.cityName}}</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.top-buffer { margin-top:20px; }
+.profileImage {  
+    width: 50px;   
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;}
+.cardRow{
+    background: linear-gradient(to right, rgba(106, 133, 182, 0.5), rgba(186, 200, 224, 0.5));
+    color: white;
+}
+.news-list li {
+    list-style: none;
+    box-sizing: content-box;
+    border-top: 1px solid #040620;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.news-list .news-item-info {
+    margin-left: 62px;
+}
